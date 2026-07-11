@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "autonomous-orchestrator"
+description = "A distributed multi-agent orchestration framework for autonomous systems"
+version = "1.0.0"
+authors = ["Autonomous Orchestrator <autonomous.orchestrator@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pip = "^21.2.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
