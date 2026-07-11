@@ -1,0 +1,11 @@
+# Default configuration for Autonomous Orchestrator
+
+orchestrator:
+  host: 0.0.0.0
+  port: 8080
+agent:
+  host: 0.0.0.0
+  port: 8081
+knowledge_base:
+  host: 0.0.0.0
+  port: 8082
