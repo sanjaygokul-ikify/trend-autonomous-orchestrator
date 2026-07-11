@@ -53,3 +53,17 @@ class Engine:
 
     def get_environments(self) -> List[Environment]:
         return list(self.environments.values())
+
+    def create_task(self, task_id: str, name: str, description: str, agent_id: str):
+        if task_id in self.tasks:
+            raise OrchestratorError("Task already exists")
+        task = Task(task_id, name, description, agent_id)
+        self.tasks[task_id] = task
+        self.logger.info(f"Task {task_id} created")
+
+    def create_environment(self, environment_id: str, name: str, description: str, agents: List[str]):
+        if environment_id in self.environments:
+            raise OrchestratorError("Environment already exists")
+        environment = Environment(environment_id, name, description, agents)
+        self.environments[environment_id] = environment
+        self.logger.info(f"Environment {environment_id} created")
